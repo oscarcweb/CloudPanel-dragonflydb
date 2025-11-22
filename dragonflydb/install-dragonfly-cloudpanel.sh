@@ -69,13 +69,13 @@ check_os() {
             fi
             ;;
         debian)
-            if [[ "$VER" != "11" && "$VER" != "12" ]]; then
-                print_error "Debian $VER is not supported. Please use Debian 11 or 12"
+            if [[ "$VER" != "11" && "$VER" != "12" && "$VER" != "13" ]]; then
+                print_error "Debian $VER is not supported. Please use Debian 11, 12 or 13"
                 exit 1
             fi
             ;;
         *)
-            print_error "OS $OS is not supported. Please use Ubuntu 22.04/24.04 or Debian 11/12"
+            print_error "OS $OS is not supported. Please use Ubuntu 22.04/24.04 or Debian 11/12/13"
             exit 1
             ;;
     esac
